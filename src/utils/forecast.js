@@ -13,7 +13,9 @@ const forecast = (long, lat, callbackFunction) => {
             callbackFunction("client error, possibly bad long lat", undefined)
         } else {
             callbackFunction(undefined, {
-                temp: body.current.temperature
+                temp: body.current.temperature,
+                description: body.current.weather_descriptions,
+                feelsLike: body.current.feelslike
             })
         }
     })

@@ -19,7 +19,7 @@ weatherForm.addEventListener("submit", (event) => {
                 return messageOne.textContent = data.error
             }
             messageOne.textContent = ''
-            messageTwo.textContent = 'The temp at location: ' + location + " is: " + data.forecast
+            messageTwo.textContent = 'The temp at location: ' + location + " is: " + data.temp + " but feels like: " + data.feelsLike + " and the outlooks is " + data.description 
         })
     }).catch((error) => {
         messageOne.textContent = error
