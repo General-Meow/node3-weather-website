@@ -4,6 +4,8 @@ const hbs = require('hbs')
 const geocode = require('./utils/geocode')
 const forecast = require('./utils/forecast')
 
+const port = process.env.PORT || 3000
+
 const app = express()
 //setup the view engine
 app.set('view engine', 'hbs')
@@ -92,4 +94,4 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {console.log("Running express app")})
+app.listen(port, () => {console.log("Running express app")})
